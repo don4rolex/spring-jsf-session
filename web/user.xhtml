@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
+  <h:head>
+    <title>User Details</title>
+  </h:head>
+  <h:body>
+    <h3>User Details</h3>
+    <h:form id="userForm">
+      <h:outputLabel value="First Name:" />
+      <h:inputText value="#{userBean.firstName}"/> <br/>
+      <h:outputLabel value="Last Name:" />
+      <h:inputText value="#{userBean.lastName}"/> <br/>
+      <h:outputLabel value="Username" />
+      <h:inputText value="#{userBean.username}"/> <br/>
+      <h:outputLabel value="Password:"/>
+      <h:inputSecret value="#{userBean.password}"/> <br/>
+      <h:commandButton value="Submit" action="#{userBean.updateUser}"/>
+    </h:form>
+  </h:body>
+</html>
+
