@@ -45,6 +45,7 @@ public class UserBean implements Serializable {
       HttpSession session = SessionUtils.getSession();
       session.setAttribute("userId", user.getId());
       setUserBean(user);
+      
       return "user";
     } else {
       FacesContext.getCurrentInstance().addMessage(
