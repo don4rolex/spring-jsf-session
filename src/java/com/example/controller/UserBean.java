@@ -50,9 +50,16 @@ public class UserBean implements Serializable {
       FacesContext.getCurrentInstance().addMessage(
           null,
           new FacesMessage(FacesMessage.SEVERITY_WARN, "Invalid login", "Please enter correct Username and Password"));
-      
+
       return "login";
     }
+  }
+
+  public String logout() {
+    HttpSession session = SessionUtils.getSession();
+    session.invalidate();
+    
+    return "login";
   }
 
   public String updateUser() {
@@ -63,7 +70,7 @@ public class UserBean implements Serializable {
 
     return "login";
   }
-  
+
   private void setUserBean(User user) {
     setFirstName(user.getFirstName());
     setLastName(user.getLastName());

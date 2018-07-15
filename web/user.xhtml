@@ -15,7 +15,8 @@
       <h:inputText value="#{userBean.username}"/> <br/>
       <h:outputLabel value="Password:"/>
       <h:inputSecret value="#{userBean.password}"/> <br/>
-      <h:commandButton value="Submit" action="#{userBean.updateUser}"/>
+      <h:commandButton value="Update" action="#{userBean.updateUser}"/> <br/>
+      <h:commandLink action="#{userBean.logout}" value="Logout"></h:commandLink>
     </h:form>
   </h:body>
 </html>
